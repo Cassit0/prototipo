@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1>Protótipo E.E Gilberto Freyre</h1><p>
+
+
+
+
+<div>
+{% load static %}
+<img src="{% static 'images/2.jpg   ' %}" alt="My image" width="100%"  >
+</div>  
+<p>
+
+
+<h2 id="esq">conteúdo dinâmico</h2>
+
+<p>A biblioteca tem as seguintes contagens de registros</p>
+<ul>
+<li><strong>Livros:</strong> {{ num_books }}</li>
+<li><strong>Cópias:</strong> {{ num_instances }}</li>
+<li><strong>Cópias disponíveis:</strong> {{ num_instances_available }}</li>
+<li><strong>Autores:</strong> {{ num_authors }}</li>
+</ul>
+
+
+<p>  Voce visitou está página {{ num_visits }} Veze{{ num_visits|pluralize }}.</p>
+
+{% endblock %}
